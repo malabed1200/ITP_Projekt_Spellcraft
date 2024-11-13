@@ -21,12 +21,12 @@ public class Button {
         }
     }
 
-    public Button() {
+    public Button(String txt) {
         // Minecraft-Schriftart laden oder Fallback verwenden
         Font minecraftFont = loadMinecraftFont();
 
         // Erstelle den Button und setze die Schriftart
-        JButton button = new JButton("Singleplayer");
+        JButton button = new JButton(txt);
         button.setFont(minecraftFont);
         button.setBackground(Color.GRAY); // Setze die Hintergrundfarbe auf Grau
         button.setForeground(Color.WHITE); // Setze die Schriftfarbe auf Weiß
@@ -50,6 +50,6 @@ public class Button {
     }
 
     public static void main(String[] args) {
-        new Button();
+        new Button("Singelplayer");
     }
 }
