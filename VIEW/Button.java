@@ -52,4 +52,8 @@ public class Button {
     public static void main(String[] args) {
         new Button("Singelplayer");
     }
+
+    public JButton createButton() {
+        return null;
+    }
 }
