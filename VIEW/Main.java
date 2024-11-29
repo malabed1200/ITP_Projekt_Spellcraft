@@ -3,9 +3,9 @@ package VIEW;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainMenu extends JFrame {
+public class Main extends JFrame {
 
-    public MainMenu() {
+    public Main() {
         // Erstelle das Hauptfenster
         setTitle("Minecraft Main Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -13,7 +13,8 @@ public class MainMenu extends JFrame {
         setLayout(null);
 
         // Hintergrundpanel hinzufügen
-        BackgroundPanel backgroundPanel = new BackgroundPanel("C:\\Users\\amira\\Downloads\\Bilder111.gif");
+        //BackgroundPanel backgroundPanel = new BackgroundPanel("C:\\Users\\amira\\Downloads\\Bilder111.gif");
+        BackgroundPanel backgroundPanel = new BackgroundPanel("Bilder/Main_Menu.png");
         backgroundPanel.setLayout(null); // Absolute Positionierung
         setContentPane(backgroundPanel);
 
@@ -50,7 +51,7 @@ public class MainMenu extends JFrame {
     }
 
     public static void main(String[] args) {
-        new MainMenu();
+        new Main();
     }
 }
 
