@@ -31,7 +31,6 @@ public class QuestionAddMenu extends JFrame {
         // Erstellen des Textfeldes & JLabels
         CustomTextField textFieldQ = new CustomTextField();
         backgroundPanel.add(textFieldQ);
-        CustomLabel Label= new CustomLabel("Hallo");
 
         // Erstellen des Textfeldes & JLabels
         CustomTextField textFieldA = new CustomTextField();
