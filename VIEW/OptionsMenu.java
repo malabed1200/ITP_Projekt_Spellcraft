@@ -1,5 +1,7 @@
 package VIEW;
 
+import VIEW.MORE.*;
+
 import javax.swing.*;
 
 public class OptionsMenu extends JFrame {
@@ -19,12 +21,14 @@ public class OptionsMenu extends JFrame {
 
         // Buttons hinzufügen
         Button buttonFactory = new Button();
-        JButton button1 = buttonFactory.createButton("Singleplayer");
-        JButton button2 = buttonFactory.createButton("Multiplayer");
+        JButton button1 = buttonFactory.createButton("Add Question");
+        JButton button2 = buttonFactory.createButton("Remove Question");
+        JButton button3 = buttonFactory.createButton("Back");
 
         // Buttons zum Hintergrund hinzufügen
         backgroundPanel.add(button1);
         backgroundPanel.add(button2);
+        backgroundPanel.add(button3);
 
         // Zentrierung der Buttons sicherstellen
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -39,6 +43,7 @@ public class OptionsMenu extends JFrame {
                 // Buttons dynamisch zentrieren
                 button1.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2 - 60, buttonWidth, buttonHeight);
                 button2.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2, buttonWidth, buttonHeight);
+                button3.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2 +60, buttonWidth, buttonHeight);
             }
         });
 

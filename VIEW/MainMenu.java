@@ -1,5 +1,8 @@
 package VIEW;
 
+import VIEW.MORE.BackgroundPanel;
+import VIEW.MORE.Button;
+
 import javax.swing.*;
 
 public class MainMenu extends JFrame {
@@ -28,27 +31,23 @@ public class MainMenu extends JFrame {
         backgroundPanel.add(button2);
         backgroundPanel.add(button3);
 
-        // Zentrierung der Buttons sicherstellen
-        addComponentListener(new java.awt.event.ComponentAdapter() {
-            @Override
-            public void componentResized(java.awt.event.ComponentEvent e) {
-                int windowWidth = getWidth();
-                int windowHeight = getHeight();
+        int windowWidth = getWidth();
+        int windowHeight = getHeight();
 
-                int buttonWidth = 300;
-                int buttonHeight = 40;
+        int buttonWidth = 300;
+        int buttonHeight = 40;
 
-                // Buttons dynamisch zentrieren
-                button1.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2 - 60, buttonWidth, buttonHeight);
-                button2.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2, buttonWidth, buttonHeight);
-                button3.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2 + 60, buttonWidth, buttonHeight);
-            }
-        });
+        // Buttons dynamisch zentrieren
+        button1.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2 - 60, buttonWidth, buttonHeight);
+        button2.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2, buttonWidth, buttonHeight);
+        button3.setBounds((windowWidth - buttonWidth) / 2, (windowHeight - buttonHeight) / 2 + 60, buttonWidth, buttonHeight);
 
         // Frame anzeigen
         setVisible(true);
     }
 
+
+    //TEST methode
     public static void main(String[] args) {
         new MainMenu();
     }
